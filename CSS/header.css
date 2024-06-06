@@ -1,0 +1,52 @@
+:root {
+  --morado--background: #140E18;
+  --gradiente--pink-to-violet: linear-gradient(to right, #E229FD, #9824FF);
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(../FUENTES/roboto/Roboto-Black.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto Medium';
+  src: url(../FUENTES/roboto/Roboto-Medium.ttf);
+}
+
+
+.header {
+    grid-area: header_;
+    background: var(--morado--background);
+    height: 60px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+
+
+    .header__svg-1 {
+        all: initial;
+        width: 40px;
+        height: 40px;
+    }
+
+    .header__h2 {
+        all: initial;
+        color: white;
+        font-size: 1.4em;
+        background-image: linear-gradient(to right, #E229FD, #9824FF);
+        color: transparent;
+        font-weight: 900;
+        background-clip: text;
+    }
+
+    .header__svg-2 {
+        margin: 0;
+        width: 40px;
+        height: 40px;
+        
+    }
+}

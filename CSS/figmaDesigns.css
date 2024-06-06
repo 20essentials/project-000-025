@@ -1,0 +1,79 @@
+
+:root {
+  --morado--background: #140E18;
+  --gradiente--pink-to-violet: linear-gradient(to right, #E229FD, #9824FF);
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(../FUENTES/roboto/Roboto-Black.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto Medium';
+  src: url(../FUENTES/roboto/Roboto-Medium.ttf);
+}
+
+
+.figmaDesigns {
+    grid-area: figmaDesigns_;
+    height: max-content;
+    max-width: 100%;
+    background: #04AA6D;
+    padding: 18px;
+
+    .figmaContainerScroll {
+        max-width: 100%;
+        background: #140E18;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        overflow: hidden;
+        
+
+        h2 {
+            all: initial;
+            background: linear-gradient(to right, #E229FD, #9824FF);
+            color: transparent;
+            background-clip: text;
+            font-family: 'Roboto Medium';
+            font-size: 1.3em;
+            font-weight: 900;
+            display: inline-block;
+            width: fit-content;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .row {
+            display: flex;
+            width: calc(12*200px);
+            gap: 15px;
+            height: auto;
+            animation: scroll1 15s linear infinite;
+
+            .row-img {
+                margin-top: 15px;
+            }
+
+            .row-img img{
+                width: 100%;
+                border-radius: 20px;
+                
+            }
+        }
+
+    }
+}
+
+@keyframes scroll1 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-3*200px));
+    }
+}
+

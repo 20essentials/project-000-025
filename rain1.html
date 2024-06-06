@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rain</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: black;
+      height: 100vh;
+      overflow: hidden;
+    }
+    i {
+      position: absolute;
+      height: 200px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      animation: haciaAbajo 5s linear infinite;
+      background-color: me;
+    }
+    i:nth-child(3n + 1) {background-image: linear-gradient(transparent, #32CD32);} /* Verde lima */
+i:nth-child(3n + 2) {background-image: linear-gradient(transparent, #228B22);} /* Verde bosque */
+i:nth-child(3n + 3) {background-image: linear-gradient(transparent, #8FBC8F);} /* Verde mar oscuro */
+
+    @keyframes haciaAbajo {
+      0% {
+        transform: translateY(-200px);
+      }
+      100% {
+        transform: translateY(calc(100vh + 300px));
+      }
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const d = document;
+    function rain() {
+      let amount = 200, i = 0;
+
+      while (i < amount) {
+        let drop = d.createElement("i"),
+          posX = Math.floor(Math.random() * window.innerWidth),
+          delay = Math.random() * -20,
+          duration = Math.random() * 5 + 1;
+
+        drop.style.left = posX + "px";
+        drop.style.animationDuration = duration + "s";
+        drop.style.animationDelay = delay + "s";
+        drop.style.width = (duration / 2) + "px";
+
+        d.body.appendChild(drop);
+        i++;
+      }
+    }
+
+    rain();
+  </script>
+</body>
+</html>

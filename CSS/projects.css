@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+  --morado--background: #140E18;
+  --gradiente--pink-to-violet: linear-gradient(to right, #E229FD, #9824FF);
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(../FUENTES/roboto/Roboto-Black.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto Medium';
+  src: url(../FUENTES/roboto/Roboto-Medium.ttf);
+}
+
+
+
+.projects { 
+    max-width: 100%;
+    grid-area: projects_;
+    height: max-content;
+    background: #1DA1F2;
+    padding: 18px;
+
+    .projects__container {
+        background-color: var(--morado--background);
+        border-radius: 20px;
+        width: 100%;
+        height: max-content;
+        padding: 18px;
+        padding-inline: 80px;
+        padding-bottom: 2.5rem;
+
+        .projects-h2 {
+            all: initial;
+            background: linear-gradient(to right, #E229FD, #9824FF);
+            color: transparent;
+            background-clip: text;
+            font-family: 'Roboto Medium';
+            font-size: 1.3em;
+            font-weight: 900;
+            display: inline-block;
+            width: fit-content;
+            margin-left: 13px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+            
+        }
+
+        .projects__grid {
+            /* background: #9824FF; */
+            width: 98%;
+            margin-inline: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5em;
+            align-content: center;
+                justify-content: center;
+               
+            
+            
+
+            .aside-template-1 {
+                max-width: 100%;
+                height: 100%;
+                border: 2px solid #1DA1F2;
+                border-radius: 20px;
+                padding: 2em;
+                display: grid;
+                place-content: center;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+                row-gap: 20px;
+
+                .aside1__art1 {
+                    outline: 2px solid #1DA1F2;
+                    border-radius: 20px;
+                    padding: 26px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-content: center;   
+                }
+
+                .img_standard {
+                    aspect-ratio: 16 / 9;
+                    width: 100%;
+                    height: auto;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    filter: drop-shadow(3px 0 10px #555);
+                    
+                }
+
+                #tesla__mac {
+                    background-image: url(../projectfotos/teslaMac.png);
+                }
+
+                .aside1__art2 {
+                    /* background-color: orange; */
+                    background-color: var(--morado--background);
+                    border-radius: 20px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: system-ui, -apple-system;
+                    padding: 0;
+                    width: 100%;
+    
+                    .titulo {
+                        background: var(--gradiente--pink-to-violet);
+                        color: transparent;
+                        
+                        background-clip: text;
+                    }
+    
+                    table {
+                        border-collapse: collapse;
+                        text-align: center;
+                        height: 100%;
+                        width: 100%;
+                        margin-inline: auto;
+
+                        button {
+                            width: 100%;
+                        }
+    
+                        td {
+                            min-width: 50px;
+                            
+                        }
+                    }
+    
+                    td, th {
+                        border: 2px solid #1DA1F2;
+                        padding: 6px 10px;
+                    }
+    
+                    .boton {
+                        padding: 2px 8px;
+                        border-radius: 20px;
+                        font-weight: 700;
+                        border: none;
+                        transition: transform .2s ease;
+
+                        a {
+                            width: 100%;
+                            display: block;
+                            background: red;
+                        }
+                    }
+    
+                    td > div:hover, td > button:hover {
+                        transform: scale(0.9);
+                    }
+                    
+                    .redondo {
+                        background-color: rgba(9, 9, 229);
+                        border-radius: 50%;
+                        width: 36px;
+                        height: 36px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-inline: auto;
+                    }
+                }
+            }
+
+            
+            #angular_mac {
+                background-image: url(../projectfotos/angularMac.png);  
+            }
+
+
+
+
+            #imdb_Mac {
+                background-image: url(../projectfotos/imdbMac.png);
+            }
+
+
+            #giphy_Mac {
+                background-image: url(../projectfotos/giphyMac.png);
+            }
+
+            #pomodoro_mac {
+                background-image: url(../projectfotos/pomodoroMac.png);
+            }
+
+            #wallhaven_mac {
+                background-image: url(../projectfotos/wallhavenMac.png);
+            }
+            
+            
+
+
+        }
+
+
+    }
+}
+
+
+
+
+@media (max-width: 970px) {
+    .projects {
+        .projects__container {
+            padding-inline: 30px;
+
+            .projects__grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(6,1fr);
+
+               
+            }
+        }
+    }
+}
+
+@media (min-width: 970px) and (max-width: 1300px) {
+    .projects {
+        .projects__container {
+            padding-inline: 30px;
+
+            .projects__grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .projects {
+        .projects__container {
+            padding-inline: 20px;
+
+            .projects__grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(6,1fr);
+                align-content: center;
+                justify-content: center;
+               
+                .aside-template-1 {
+                    padding: 1.2em;
+
+                    .aside1__art2 {
+
+                        td, th {
+                            border: 2px solid #1DA1F2;
+                            padding: 2px 6px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (width <= 1300px) and (orientation: landscape) {
+  .projects {
+    .projects__container {
+      .projects__grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+      }
+    }
+  }
+}
+@media (width <= 1300px) and (orientation: portrait) {
+  .projects {
+    .projects__container {
+      .projects__grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+body {
+    width: 100%; /* Cambia de 100vw a 100% y la barra horizontal se elimino 28/02/24 */
+    height: 100%;
+    grid-template-areas: 'header_ ' /* 60px */
+                        'bentoGrid_' /* max-content */
+                        'bentoGrid_' /* max-content */
+                        'figmaDesigns_' /* 500px */
+                        'works_'  /* 800px */
+                        'projects_'
+                        'footer_';
+    margin: 0;
+    padding: 0;
+    grid-template-rows: 60px max-content max-content 500px 700px max-content 180px;
+    grid-template-columns: 1fr ;
+    /* min-width: 480px; */
+    min-width: 370px;
+    
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --morado--background: #140E18;
+    --gradiente--pink-to-violet: linear-gradient(to right, #E229FD, #9824FF);
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../FUENTES/roboto/Roboto-Black.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto Medium';
+    src: url(../FUENTES/roboto/Roboto-Medium.ttf);
+}
+
+
+
+
+
+
+
+
+
